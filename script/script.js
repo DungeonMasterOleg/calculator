@@ -5,6 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const equalsButton = document.getElementById('equals')
     const procentButton = document.getElementById('procent')
     const plusminusButton = document.getElementById('plusminus')
+    const operators = document.querySelectorAll('.operator')
+
+    operators.forEach(operator => {
+        operator.addEventListener('click', () => {
+            const value = operator.innerHTML
+            if (display.value.slice(-1) != ) {
+                display.value += value
+            }
+        })
+    })
 
     plusminusButton.addEventListener('click', () => {
         display.value = Math.abs(value)
@@ -17,7 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const value = button.innerHTML
-            display.value += value
+
+                display.value += value  
+         
+            
+           
         })
     })
 
