@@ -6,12 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const procentButton = document.getElementById('procent')
     const plusminusButton = document.getElementById('plusminus')
     const operators = document.querySelectorAll('.operator')
+    const check = ['+', '-', '*', '/','%','+|-']
 
     operators.forEach(operator => {
         operator.addEventListener('click', () => {
-            const value = operator.innerHTML
-            if (display.value.slice(-1) != ) {
-                display.value += value
+            const lastValue=display.value.slice(-1)
+            if ( lastValue !=   operators.includes("operator") 
+        ) {
+                display.value += value 
             }
         })
     })
